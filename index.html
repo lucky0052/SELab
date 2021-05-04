@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Input tutorial</title>
+    <style>
+        div {
+            
+            border: 1px solid #c3c3c3;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: center;
+        }
+       
+       h1   {color: blue;background-color:yellow; text-align:center;}
+       body {height:800px;color: blue;background-color:yellow; vertical-align:central; align-content:center }
+    </style>
+    <script language="javascript">
+	function Init() {
+            document.getElementById("value1").value=0;
+            document.getElementById("value2").value=0;
+		}
+
+        function addNumbers() {
+            var val1 = parseInt(document.getElementById("value1").value);
+            var val2 = parseInt(document.getElementById("value2").value);
+            var ansD = document.getElementById("answer");
+            ansD.value = parseInt(val1) + parseInt(val2);
+        }
+        function subNumbers() {
+            var val1 = parseInt(document.getElementById("value1").value);
+            var val2 = parseInt(document.getElementById("value2").value);
+            var ansD = document.getElementById("answer");
+            ansD.value = parseInt(val1) - parseInt(val2);
+        }
+
+        function mulNumbers() {
+            var val1 = parseInt(document.getElementById("value1").value);
+            var val2 = parseInt(document.getElementById("value2").value);
+            var ansD = document.getElementById("answer");
+            ansD.value = parseInt(val1) * parseInt(val2);
+        }
+
+        function divNumbers() {
+            var val1 = parseInt(document.getElementById("value1").value);
+            var val2 = parseInt(document.getElementById("value2").value);
+            var ansD = document.getElementById("answer");
+            ansD.value = parseInt(val1) / parseInt(val2);
+        }
+    </script>
+
+    <h1> Arithmetic Operations </h1>
+</head>
+
+<body style="height: 1200px; align-content:center; width:1200px" onload="Init()">
+    <table style="vertical-align:central">
+            <tr><td width="20%"></td>
+            <td width="80%">
+                <div style="width:800px; text-align:center; align-content:center; vertical-align:central; border:double">
+                    <table>
+                        <tr>
+                            <td>
+                                <table>
+                                    <tr>
+                                        <td>value1 =</td>
+                                        <td><input type="text" id="value1" name="value1" value="1" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td>value2 =</td>
+                                        <td><input type="text" id="value2" name="value2" value="2" /></td>
+                                    </tr>
+                                    
+                                        <td colspan="2">
+                                            <table>
+                                                <tr>
+                                                    <td><input type="button" name="Sumbit" value="Add" onclick="javascript:addNumbers()" /> </td>
+                                                    <td><input type="button" name="SumbitSubtract" value="Subtract" onclick="javascript:subNumbers()" /></td>
+                                                    <td> <input type="button" name="SumbitMultiply" value="Multiply" onclick="javascript:mulNumbers()" /></td>
+                                                    <td> <input type="button" name="Sumbitdivide" value="Divide" onclick="javascript:divNumbers()" /></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td>
+                                Answer =
+                                <input type="text" id="answer" name="answer" value="" />
+                            </td>
+                            
+                                </table>
+                </div>
+            </td>
+        </tr>
+    </table>
+   
+   </body>
+</html>
